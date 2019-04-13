@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <div class="flex-head">
+          <div class="flex-title">
+            <h1>
+              <span class="dp">dp</span>
+              <span class="designs"
+                >de<span class="s">s</span>ign<span class="s">s</span></span
+              >
+            </h1>
+          </div>
+          <div class="flex-sign">
+            <p>sign up</p>
+          </div>
+        </div>
+      </header>
+
+      <section>
+        <div class="section">
+          <nav>
+            <div class="nav-list">
+              <div class="nav-item">
+                <a href="index.html">Home</a>
+              </div>
+              <div class="nav-item">
+                <a href="about.html">About</a>
+              </div>
+              <div class="nav-item">
+                <a href="portfolio.html">Portfolio</a>
+              </div>
+              <div class="nav-item">
+                <a href="#">Blog</a>
+              </div>
+            </div>
+          </nav>
+
+          <main>
+            <div class="flex-main">
+              <div class="flex-item">
+                <h3>Blog</h3>
+              </div>
+              <div class="flex-item">
+                <h5>The first steps of our cat in programming sites (JAVASCRIPT)</h5>
+              </div>
+              <div class="flex-item-code">
+                <p>
+                  <!DOCTYPE html>
+                  <html lang="en">
+                    <head>
+                      <meta charset="UTF-8" />
+                      <meta
+                        name="viewport"
+                        content="width=device-width, initial-scale=1.0"
+                      />
+                      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+                      <title>Document</title>
+                      <link rel="stylesheet" type="text/css" href="style.css" />
+                    </head>
+                    <body>
+                      <p>
+                        Czy jesteś pewien, że chcesz wejść na tą brzydką stronę
+                        internetową?
+                      </p>
+
+                      <button onclick="myFunction()">Your answer</button>
+                      <hr>
+                      <button onclick="getAlert()">get Alert!</button>
+                      <script>
+                        document.write('<br>');
+                        let second = 1;
+                        let hour;
+                        let day;
+                        let year;
+                        let catAge = 3;
+
+                        hour = second * 60;
+                        day = second * 60 * 24;
+                        year = day * 365;
+                        catAge = catAge * year;
+                        document.write(
+                          'The hour contains of: ' + hour + ' seconds<br>'
+                        );
+                        document.write(
+                          'The day contains of: ' + day + ' seconds<br>'
+                        );
+                        document.write(
+                          'The year contains of: ' + year + ' seconds<br>'
+                        );
+                        document.write(
+                          'Cat\'s age in seconds: ' +
+                            catAge +
+                            ' seconds<br>'
+                        );
+
+                        //Program displays the fly height is given by user
+                        let flyHeight = prompt('Please enter fly height: ');
+                        document.write(
+                          "We're flying at a height of  " +
+                            flyHeight +
+                            ' metres'
+                        );
+
+                        //write out defined text
+                        document.write(
+                          'Czesc!<br>' +
+                            'To jest moj program<br>' +
+                            'I<br>' +
+                            'Jest<br>' +
+                            'On<br>' +
+                            'Fajny!<br>'
+                        );
+
+                        //confirm
+                        function myFunction() {
+                          confirm('OK?');
+                        }
+
+                        //Concatenate six phrases
+                        let word1 = 'test1';
+                        let word2 = 'test2';
+                        let word3 = 'test3';
+                        let word4 = 'test4';
+                        let word5 = 'test5';
+                        let word6 = 'test6';
+
+                        document.write(
+                          word1 +
+                            ' ' +
+                            word2 +
+                            ' ' +
+                            word3 +
+                            ' ' +
+                            word4 +
+                            ' ' +
+                            word5 +
+                            ' ' +
+                            word6 +
+                            '<br>'
+                        );
+                      </script>
+                      <button onclick="pushButton()">Press me!</button>
+                      <button onclick="getConfirmButton()">Press me!</button>
+                      <button onclick="getPromptButton()">Press me!</button>
+                      <button onclick="getAlertButton()">Press me!</button>
+                      <script>
+                        function pushButton() {
+                          document.write('Fajne! Masz jeden');
+                        }
+                        function getConfirmButton() {
+                          confirm('OK?');
+                        }
+                        function getPromptButton() {
+                          prompt('OK?');
+                        }
+                        function getAlertButton() {
+                          alert('OK?');
+                        }
+
+                        document.write('<br>');
+
+                        //alert
+                        function getAlert() {
+                          alert("Szanowny uzytkowniku przegladarki chrome! Jestes ...");
+                        }
+                      </script>
+                    </body>
+                  </html>
+                </p>
+              </div>
+            </div>
+          </main>
+
+          <aside>
+            <div class="flex-main">
+              <div class="flex-item">
+                <h5>Advertisements</h5>
+              </div>
+              <div class="flex-item">
+                <img
+                  src="img/aside.jpg"
+                  alt="cat's food"
+                  width="218px"
+                  height="263px"
+                />
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <footer></footer>
+    </div>
+  </body>
+</html>

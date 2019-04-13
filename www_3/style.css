@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+#container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  height: 15vh;
+  background-color: black;
+  color: white;
+}
+
+.dp{ 
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 100;
+}
+
+.designs{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  color: grey
+}
+
+.s{
+  font-size: 2rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  color: white;
+}
+
+.flex-head {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.flex-title {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.flex-sign {
+  margin-top: 40px;
+  margin-right: 20px;
+}
+
+section{
+  height: 70vh;
+}
+.section {
+  
+  height: 100%;
+}
+
+nav,
+aside {
+  float: left;
+  width: 20%;
+  background-color: lightgreen;
+  height: 100%;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 70%;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: center;
+}
+
+a:link{
+  text-decoration: none;
+}
+
+main {
+  float: left;
+  width: 60%;
+  height: 100%;
+  background-color: pink;
+}
+
+.flex-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-item {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-main-portfolio{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 400px;
+}
+
+.flex-portfolio-item{ 
+  height: 150px;
+}
+
+.portfolio-head{
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  height: 15vh;
+  clear: both;
+  background-color: black;
+  color: white;
+}
