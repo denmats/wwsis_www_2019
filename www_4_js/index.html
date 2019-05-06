@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Tests IF</h3>
+
+    <script>
+      var choice = prompt("Choose one punkt of the menu: 1-10 or Q - exit")
+      document.write('<br>');
+      
+      switch (choice) {
+        case '1':
+          document.write('Napisz program Czy liczba jest parzysta? pobierający od użytkownika jedną liczbę i drukujący na ekranie jedną z informacji LICZBA JEST PARZYSTA bądź LICZBA JEST NIEPARZYSTA.<br>');
+          var n = prompt('Please give a number: ');
+          getEvenNumbers(n);
+          break;
+       
+        case '2':
+        document.write("Napisz program, który poprosi użytkownika o podanie dwóch liczb a i b. Program po pobraniu liczb ma wypisać,   która liczba jest większa.<br>")
+          var a = prompt('Give a: ');
+          var b = prompt('Give b: ');
+          a > b
+            ? document.write(a + ' is greater than ' + b)
+            : document.write(b + ' is greater than ' + a);
+          break;
+        
+        case '3':
+        document.write("Napisz program, który poprosi użytkownika o podanie dwóch liczb a i b. Program po pobraniu liczb ma wypisać,która liczba jest mniejsza.<br>");
+          var a = prompt('Give a: ');
+          var b = prompt('Give b: ');
+          a < b
+            ? document.write(a + ' is less than ' + b)
+            : document.write(b + ' is less than ' + a);
+          break;
+        
+        case '4':
+        document.write("Napisz program, który poprosi użytkownika o podanie dwóch liczb a i b. Program po pobraniu liczb ma wypisać czy liczba jest dodatnia czy ujemna.<br>")
+          var a = prompt('Give a: ');
+          var b = prompt('Give b: ');
+          a > 0
+            ? document.write(a + ' is a positive number <br>')
+            : document.write(a + ' is a negative number<br>');
+          b > 0
+            ? document.write(b + ' is a positive number<br>')
+            : document.write(b + ' is a negative number<br>');
+          break;
+        
+        case '5':
+        document.write("Napisz program, który poprosi o dowolną ocenę:- jeżeli będzie równa 1 odpisze, że to zła ocena- jeżeli będzie równa 2 odpisze, że to ocena dla ludzi bez ambicji- jeżeli będzie równa 3 odpisze, że to ocena dla przeciętniaków- jeżeli będzie równa 4 odpisze, że to świetna ocena- jeżeli będzie równa 5 odpisze, że to wysoka ocena- jeżeli będzie równa 6 odpisze, że to ocena oniryczna- dla każdej innej wyświetli napis: Miała być ocena a nie dowolna liczba!<br>");
+          var a = prompt('Give a mark: ');
+          if (a == 1) document.write("it's bad mark");
+          else if (a == 2)
+            document.write('this mark is for person without ambitions');
+          else if (a == 3) document.write('this mark is for averaging person');
+          else if (a == 4) document.write("it's a good mark");
+          else if (a == 5) document.write('this mark is very good');
+          else if (a == 6) document.write('this mark is excelent');
+          else document.write('The marks must be from range from 1 to 6');
+          break;
+        
+        case '6':
+        document.write("Napisz program Czy liczba a jest podzielna przez b? Program ma pobrać od użytkownika dwie liczby całkowite a, b. Jako wynik pracy program ma wydrukować informację mówiącą o tym, czy liczba a jest podzielna przez liczbę b  (jeden z tekstów A JEST PODZIELNE PRZEZ B lub A NIE JEST PODZIELNE PRZEZ B).<br>")
+          var a = prompt('Give a: ');
+          var b = prompt('Give b: ');
+          a % b == 0
+            ? document.write(a + ' is divided by ' + b)
+            : document.write(a + " isn't divided by " + b);
+          break;
+        
+        case '7':
+        document.write("Napisz program potrafiący rozwiązywać równanie kwadratowe: y = ax2 + bx + c<br>");
+          var a = prompt('Give a: ');
+          var b = prompt('Give b: ');
+          var c = prompt('Give c: ');
+          var delta = b * b - 4 * a * c;
+          if (delta > 0) {
+            document.write('x1 = ' + ((-b - Math.sqrt(delta)) / 2) * a);
+            document.write('x2 = ' + ((-b + Math.sqrt(delta)) / 2) * a);
+          } else if (delta == 0) {
+            document.write('x0 = ' + -b / (2 * a));
+          } else document.write('There are no real solutions<br>');
+          break;
+         
+        case '8':
+        document.write("Napisz program, który wczyta 3 liczby całkowite i wypisze je na ekran w kolejności rosnącej np. 4 7 1 i wypisze rozwiązanie 1 4 7.<br>");
+          var a = prompt('Give a: ');
+          var b = prompt('Give b: ');
+          var c = prompt('Give c: ');
+
+          if (a - b >= c && b >= c) {
+            document.write(c + ' ' + b + ' ' + a);
+          } else if (a - b >= c && c > b) {
+            document.write(b + ' ' + c + ' ' + a);
+          } else if (b - c >= a && c >= a) {
+            document.write(a + ' ' + c + ' ' + b);
+          } else if (b - c >= a && a > c) {
+            document.write(c + ' ' + a + ' ' + b);
+          } else if (c - a >= b && a >= b) {
+            document.write(b + ' ' + a + ' ' + c);
+          } else {
+            document.write(a + ' ' + b + ' ' + c);
+          }
+          break;
+        
+        case '9':
+        document.write("Napisz program, który poprosi o podanie trzech długości boków trójkąta i sprawdzi czy jest on prostokątny.<br>")
+          var a = prompt('Give the length of the first triangle side: ');
+          var b = prompt('Give the length of the second triangle side: ');
+          var c = prompt('Give the length of the third triangle side: ');
+          var max;
+
+          if (a - b > c) {
+            max = a;
+            side1 = b;
+            side2 = c;
+          } else if (b - a > c) {
+            max = b;
+            side1 = a;
+            side2 = c;
+          } else {
+            max = c;
+            side1 = b;
+            side2 = a;
+          }
+
+          if (side1 * side1 + side2 * side2 == max * max) {
+            document.write('the triangle is right triangle');
+          } else document.write('the triangle is NOT right triangle');
+          break;
+         
+        case '10':
+        document.write("Napisz program wczytujący trzy liczby a,b i c, a następnie wyświetlający na ekranie największą z tych liczb,  najmniejszą, średnią oraz medianę.<br>")
+          var a = prompt('Give a: ');
+          var b = prompt('Give b: ');
+          var c = prompt('Give c: ');
+
+          a = parseInt(a);
+          b = parseInt(b);
+          c = parseInt(c);
+
+          getMaxMinAvgMed(a, b, c);
+          break;
+        case 'Q':
+          document.write('The program is over');
+          break;
+        default:
+          displayMenu();
+      }
+
+      //##############################################################################################
+
+      function getEvenNumbers(n) {
+        n % 2 == 0
+          ? document.write('This is even number')
+          : document.write('This is odd number');
+      }
+
+      function getMaxMinAvgMed(a, b, c) {
+        if (a - b >= c && b >= c) {
+          document.write(
+            'min: ' +
+              c +
+              ' ' +
+              'median: ' +
+              b +
+              ' ' +
+              'max: ' +
+              a +
+              ' average: ' +
+              (a + b + c) / 3
+          );
+        } else if (a - b >= c && c > b) {
+          //document.write(b + ' ' + c + ' ' + a);
+          document.write(
+            'min: ' +
+              b +
+              ' ' +
+              'median: ' +
+              c +
+              ' ' +
+              'max: ' +
+              a +
+              ' average: ' +
+              (a + b + c) / 3
+          );
+        } else if (b - c >= a && c >= a) {
+          //document.write(a + ' ' + c + ' ' + b);
+          document.write(
+            'min: ' +
+              a +
+              ' ' +
+              'median: ' +
+              c +
+              ' ' +
+              'max: ' +
+              b +
+              ' average: ' +
+              (a + b + c) / 3
+          );
+        } else if (b - c >= a && a > c) {
+          //document.write(c + ' ' + a + ' ' + b);
+          document.write(
+            'min: ' +
+              c +
+              ' ' +
+              'median: ' +
+              a +
+              ' ' +
+              'max: ' +
+              b +
+              ' average: ' +
+              (a + b + c) / 3
+          );
+        } else if (c - a >= b && a >= b) {
+          //document.write(b + ' ' + a + ' ' + c);
+          document.write(
+            'min: ' +
+              b +
+              ' ' +
+              'median: ' +
+              a +
+              ' ' +
+              'max: ' +
+              c +
+              ' average: ' +
+              (a + b + c) / 3
+          );
+        } else {
+          //document.write(a + ' ' + b + ' ' + c);
+          document.write(
+            'min: ' +
+              a +
+              ' ' +
+              'median: ' +
+              b +
+              ' ' +
+              'max: ' +
+              c +
+              ' average: ' +
+              (a + b + c) / 3
+          );
+        }
+      }
+    </script>
+
+    <h3>Tests WHILE LOOP</h3>
+    <p>*Due to run this section you need to uncomment code</p>
+    <script>
+      // Napisz program przy użyciu pętli while który wyświetli na ekranie 100 razy napis : To jest efekt pętli while.
+      /*var x = 0;
+        while (x < 100) {
+        document.write('this is a while loop<br>');
+        x++;
+      }*/
+
+      // Napisz program przy użyciu pętli while wyświetlający na ekranie liczby od 1 do 20, ale niepodzielne przez 2.
+      /*var x = 0;
+      while (x < 20) {
+        if(x%2 != 0)
+        document.write(x+"<br>");
+        x++;
+      }*/
+
+      // Napisz program przy użyciu pętli while wyświetlający na ekranie liczby od 1 do 20, ale podzielne przez 3.
+      /*var x = 0;
+      while (x < 20) {
+        if(x%3 == 0)
+        document.write(x+"<br>");
+        x++;
+      }*/
+
+      // Napisz program przy użyciu pętli while, w którym podajemy liczbę naturalną do momentu podania liczby podzielnej // przez 12. Algorytm kończy działanie napisem: „Podałeś liczbę podzielną przez 12, wiec kończę działanie pętli".
+      /*var x;
+      while(true){
+        x = prompt("Give a number: ");
+        if(x%12 == 0){
+          document.write("Podales liczbe podzielona przez 12, wiec koncze dzialanie petli");
+          break;
+        }
+      }*/
+
+      // Napisz program przy użyciu pętli while wczytujący z klawiatury wartości, a następnie wyświetlający średnią tych  // wartości, niech program kończy wprowadzanie, kiedy natrafi na cyfrę 0.
+      /*arr = [];
+      var x;
+      var sum = 0;
+      var counter = 0;
+      while(true){
+        x = prompt("Give a number: ");
+        x = parseInt(x);
+        arr.push(x);
+        if(x == 0){
+          document.write("You gave 0, so program returned average of all given numbers: ");
+          arr.forEach(e => {
+            sum +=e;
+            counter++;
+          }); 
+          document.write(sum/(counter-1));
+          break;
+        }
+      }*/
+
+      // Napisz program przy użyciu pętli while , który skończy wczytywania liczb podawanych przez użytkownika, gdy ich // suma przekroczy 100.
+      /*var x;
+      var sum = 0;
+      while(true){
+        x = prompt("Give a number: ");
+        x = parseInt(x);
+        sum += x;
+
+        if(sum > 100){
+          document.write("The sum of given numbers is over than 100: ");
+          document.write(sum);
+          break;
+        }
+      }*/
+
+      //Napisz program przy użyciu pętli while , który wypisuje na ekran liczby całkowite od wartości wybranej do zera.
+      /*var x = prompt("Give a start number: ");
+      x = parseInt(x);
+      while(x > 0){
+        document.write(x+" ");
+        x--;
+      }*/
+    </script>
+  </body>
+</html>
