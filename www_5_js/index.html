@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>JS</h3>
+    <script>
+      //Arrays
+      //Task1 
+      var tab = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      var tab1 =[];
+      var counter = 1;
+
+      console.log(tab);
+      while (counter <= 3) {
+        var userInput = prompt('Podaj parzysta liczbe: ');
+        if (userInput % 2 == 0) {
+          userInput = parseInt(userInput);
+          tab.push(userInput);
+          counter++;
+        } else console.log('Liczba nie jest parzysta');
+      }
+      console.log(tab);
+
+      for(i=0;i<tab.length;i++){
+        if(tab[i]%2 != 0){
+          var index = tab.indexOf(tab[i]);
+          tab1.push(index);
+        }
+      } 
+      
+      for(i=0;i<3;i++){
+        tab.splice(tab1.indexOf(tab1[i]),1);
+      }
+      
+      console.log(tab[5-1]);
+      
+      for(i = 0;i<tab.length; i++){
+        if(tab[i] == 4){
+          
+          tab.splice(tab[i],1,3);
+        }
+        if(tab[i] == 9){
+          
+          tab.splice(tab[i],1,33);
+        }
+
+      }
+      console.log(tab);
+
+      //Task2
+      // var n = 1;
+      // var tab2 = [];
+      // while(n<=5){
+      //   var name = prompt("Give a name: ", "Anonymous");
+      //   tab2.push(name);
+      //   n++;
+      // }
+
+      // tab2.forEach(e => {
+      //   console.log("Witaj " +e);
+      // });
+
+
+    //Task3
+    // var tabSize = prompt("Give the table size: ");
+    // console.log(tabSize);
+    // var tab = [];
+    // for(i=0; i<tabSize;i++){
+    //   tab.push(i);
+    // }
+
+    // var i = 0;
+    // while(i<tabSize){
+    //   console.log(tab[i]);
+    //   i++;
+    // }
+    
+
+    //+++++++++++++++++++++++++++++++
+    //Function
+    //Task 7
+    // compareTwoNumbers();
+
+    // function compareTwoNumbers(){
+    // var first = prompt("Give the first number: ");
+    // var second = prompt("Give the second number: ");
+    // first = parseInt(first);
+    // second =parseInt(second);
+    // (first == second) ? console.log("They are equal"):console.log("The difference between these two numbers is "+Math.abs(first-second));
+    // }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+    
+
+
+      
+    </script>
+  </body>
+</html>
